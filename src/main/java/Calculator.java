@@ -2,10 +2,9 @@ public class Calculator {
     String item = "";
     static double sum = 0;
 
-    public double productsSum(Items items) {
+    public void productsSum(Items items) {
         sum += items.costOfProduct();
         System.out.println("Общая сумма товаров: " + sum + " руб.");
-        return sum;
     }
 
     public void addNewProducts(Items items) {

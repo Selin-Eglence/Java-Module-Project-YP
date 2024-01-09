@@ -1,8 +1,7 @@
-import java.util.Scanner;
 
 public class Payment {
-    private static double pay;
-    private static int clients;
+    double pay;
+    int clients;
 
 
     Payment( double a, int visitors) {
@@ -10,17 +9,15 @@ public class Payment {
         clients = visitors;
     }
 
-    public static void paymentPerPerson() {
-        Scanner scanner = new Scanner(System.in);
-        Calculator calculator = new Calculator();
+    public void paymentPerPerson() {
         double finalSum = pay/clients;
         double piss = Math.floor(finalSum);
         String sumFinal = String.format("%.2f",finalSum);
         String ruble;
-        if (sumFinal.equals("1.00")) {
+        if ((piss % 10 == 1) && (piss != 11)) {
             ruble = "рубль";
         }
-        else if (piss>= 2.00 && piss<5.00) {
+        else if ((piss % 10 >= 2) && (piss % 10 <= 4) && ((piss < 10) || (piss > 20)))  {
             ruble = "рубля";
         }
         else {

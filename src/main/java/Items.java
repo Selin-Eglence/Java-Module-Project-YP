@@ -1,16 +1,18 @@
 public class Items {
-    static double cost;
-    static String nameProduct;
+    double cost;
+    String nameProduct;
 
     Items(double price, String name) {
         cost = price;
         nameProduct = name;
     }
 
-    public static String nameOfProduct() {
+    public String nameOfProduct() {
+
         return nameProduct;
     }
-    public static double costOfProduct() {
+    public double costOfProduct() {
+
         return cost;
     }
 
